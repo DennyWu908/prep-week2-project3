@@ -21,43 +21,67 @@ document.getElementById("q0").classList.add("status-good");
 // 1. Output each item in the following Array to your console within their own paragraphs:
 var livingRoom = ['couch', 'lamp', 'rug', 'shelf'];
 
-
-
+for (i = 0; i < livingRoom.length; i++) {
+	console.log("<p>" + livingRoom[i] + "</p>");
+	document.getElementById("q1").innerHTML += "<p>" + livingRoom[i] + "</p>";
+}
 
 // 2. Using a loop, log numbers 22-33 within their own paragraphs.
 
-
+for (i = 22; i < 34; i++) {
+	document.getElementById("q2").innerHTML += "<p>" + i + "</p>";
+}
 
 
 
 // 3. Using a similar loop, log numbers 75 to 100, only in increments of five.
 
-
+for (i = 75; i <= 100; i += 5) {
+	document.getElementById("q3").innerHTML += "<p>" + i + "</p>";
+}
 
 
 
 // 4. Write a while loop that displays paragraphs of "This is how a professional loops." to the HTML page 5 times.
 
-
-
-
+for (i = 0; i < 5; i++) {
+	document.getElementById("q4").innerHTML += "<p>This is how a professional loops.</p>";
+}
 
 
 // 5. Separately, use both a for loop and while loop to do the same thing.
 //     Display in unique paragraphs the sentence "At home, I have _____ cats."
 //     The numbers should range from 10 to 110, in increments of 25.
 
+for (i = 10; i <= 110; i += 25) {
+	document.getElementById("q5").innerHTML += "<p>At home, I have " + i + " cats.</p>";
+}
 
+var num = 10
 
+//document.getElementById("q5").innerHTML += "<p>At home, I have " + num + " cats.</p>";
+
+while (num <= 110) {
+	document.getElementById("q5").innerHTML += "<p>At home, I have " + num + " cats.</p>";
+	num += 25
+}
 
 
 // 6. Given the following Array, display in unique paragraphs'Even' if the number is even, 'Even and greater than 10' if the
 //    number is even and greater than 10, and 'Odd' if the number is odd.
 //    HINT: Google 'remainder operator'
+
 var numArray = [2, 17, 9, 24, 8];
 
-
-
+for (i = 0; i < numArray.length; i++) {
+	if (numArray[i] % 2 == 0 && numArray[i] > 10) {
+		document.getElementById("q6").innerHTML += numArray[i] + "is Even and greater than 10";
+	} else if (numArray[i] % 2 !== 0) {
+		document.getElementById("q6").innerHTML += numArray[i] + "is Odd";
+	} else {
+		document.getElementById("q6").innerHTML += numArray[i] + "is Even";
+	}
+}
 
 
 // 7. Using the following Array, create variable called numThrees with the value [13, 23, 33, 43, 53, 63, 73]
