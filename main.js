@@ -75,11 +75,11 @@ var numArray = [2, 17, 9, 24, 8];
 
 for (i = 0; i < numArray.length; i++) {
 	if (numArray[i] % 2 == 0 && numArray[i] > 10) {
-		document.getElementById("q6").innerHTML += numArray[i] + "is Even and greater than 10";
+		document.getElementById("q6").innerHTML += "<p>" + numArray[i] + " is Even and greater than 10." + "</p>";
 	} else if (numArray[i] % 2 !== 0) {
-		document.getElementById("q6").innerHTML += numArray[i] + "is Odd";
+		document.getElementById("q6").innerHTML += "<p>" + numArray[i] + " is Odd." + "</p>";
 	} else {
-		document.getElementById("q6").innerHTML += numArray[i] + "is Even";
+		document.getElementById("q6").innerHTML += "<p>" + numArray[i] + " is Even." + "</p>";
 	}
 }
 
@@ -87,10 +87,17 @@ for (i = 0; i < numArray.length; i++) {
 // 7. Using the following Array, create variable called numThrees with the value [13, 23, 33, 43, 53, 63, 73]
 var numArray = [13, 15, 17, 23, 25, 27, 33, 35, 37, 43, 45, 47, 53, 55, 57, 63, 65, 67, 73, 75, 77];
 
+var numThrees = [];
 
+for (i = 0; i < numArray.length; i += 3) {
+	if (numArray[i] == 13) {
+		numThrees.push(numArray[i]);
+	} else if (i % 3 == 0) {
+		numThrees.push(numArray[i]);
+	}
+}
 
-
-
+document.getElementById("q7").innerHTML = numThrees
 
 
 // 8. Write a loop that outputs the following to unique paragraphs:
@@ -102,10 +109,12 @@ var numArray = [13, 15, 17, 23, 25, 27, 33, 35, 37, 43, 45, 47, 53, 55, 57, 63, 
 // ######
 // #######
 
+var hashArray = [];
 
-
-
-
+for (i = 0; i < 7; i++) {
+	hashArray.push('#');
+	document.getElementById("q8").innerHTML += "<p>" + hashArray + "</p>"
+}
 
 
 // 9. FIZZ BUZZ
@@ -114,7 +123,17 @@ var numArray = [13, 15, 17, 23, 25, 27, 33, 35, 37, 43, 45, 47, 53, 55, 57, 63, 
 // If the number is divisible by 5, print "Buzz" instead of the number.
 // If the number is divisible by both 3 and 5, print "FizzBuzz" instead of the number.
 
-
+for (i = 1; i <= 100; i++) {
+	if (i % 3 == 0) {
+		document.getElementById("q9").innerHTML += "Fizz" + ", ";
+	} else if (i % 5 == 0) {
+		document.getElementById("q9").innerHTML += "Buzz" + ", ";
+	} else if (i % 3 == 0 && i % 5 == 0) {
+		document.getElementById("q9").innerHTML += "FizzBuzz" + ", ";
+	} else {
+		document.getElementById("q9").innerHTML += i + ", ";
+	}
+}
 
 
 
