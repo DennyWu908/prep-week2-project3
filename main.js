@@ -1,13 +1,13 @@
-/*
-=======================================================
-** Week 2 - Project 1 **
 
-Below are a number of problems for you to solve
-using JS. The JS code can be written below each
-problem.
+// =======================================================
+// ** Week 2 - Project 1 **
 
-=======================================================
-*/
+// Below are a number of problems for you to solve
+// using JS. The JS code can be written below each
+// problem.
+
+// =======================================================
+// */
 
 
 // 0. Connect the main.js document to the HTML page.
@@ -155,11 +155,46 @@ for (i = 1; i <= 100; i++) {
 // BONUS: What happens if your user enters something other than "rock", "paper", or "scissors?". Change your default case
 //     to print a snarky message to the console if the input doesn't match any of the options.
 
+// var human = document.getElementById("choice").value;
 
+// var computer = Math.random
 
+// if (computer > 0 && computer <= 0.33) {
+// 	var computerChoice = "rock";
+// } else if (computer >= 0.34 && computer <= 0.66) {
+// 	var computerChoice = "paper";
+// } else {
+// 	var computerChoice = "scissors";
+// }
 
+// if ((human == "scissors" && computerChoice == "rock") || (human == "paper" && computerChoice == "scissors") || (human == "rock" && computerChoice == "paper")) {
+// 	document.getElementById("q10").innerHTML = "The computer wins!";
+// } else if ((computerChoice == "scissors" && human == "rock") || (computerChoice == "paper" && human == "scissors") || (computerChoice == "rock" && human == "paper")) {
+// 	document.getElementById("q10").innerHTML = "You win!";
+// } else {
+// 	document.getElementById("q10").innerHTML = "It's a tie!";
+// }
 
+document.getElementById("makeChoice").addEventListener("click", function() {
+	var human = document.getElementById("choice").value;
+	var computer = Math.random();
 
+	if (computer > 0 && computer <= 0.33) {
+		var computerChoice = "rock";
+	} else if (computer >= 0.34 && computer <= 0.66) {
+		var computerChoice = "paper";
+	} else {
+		var computerChoice = "scissors";
+	}
+
+	if ((human == "scissors" && computerChoice == "rock") || (human == "paper" && computerChoice == "scissors") || (human == "rock" &&computerChoice == "paper")) {
+		document.getElementById("q10").innerHTML = "The computer wins!";
+	} else if ((computerChoice == "scissors" && human == "rock") || (computerChoice == "paper" && human == "scissors") || (computerChoice == "rock" && human == "paper")) {
+		document.getElementById("q10").innerHTML = "You win!";
+	} else {
+		document.getElementById("q10").innerHTML = "It's a tie!";
+	}
+});
 
 // ADVANCED TRACK
 // 16. Write a conditional statement to find the largest of the numbers in the array provided.
@@ -219,13 +254,12 @@ var largestNum = [-5, -2, -6, 0, -1]
 
 
 
-/* SANDBOX TRACK
+// SANDBOX TRACK
 
-Solving all of these problems is a great step in the right direction, 
-but the next step is coming up with your own arrangements to solve 
-new problems. Practice creating your own problems to solve and their solutions -
-you can even challenge your classmates! 
+// Solving all of these problems is a great step in the right direction, 
+// but the next step is coming up with your own arrangements to solve 
+// new problems. Practice creating your own problems to solve and their solutions -
+// you can even challenge your classmates! 
  
-Also, consider how you can add/remove CSS styles to create added presentation with the results. 
+// Also, consider how you can add/remove CSS styles to create added presentation with the results. 
 
-*/
